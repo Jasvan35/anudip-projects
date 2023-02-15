@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h2>Edit Product</h2>
+    
+    
+    <form #editForm="ngForm" (ngSubmit)="editProduct()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" required>
+  </div>
+
+
+  <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input type="number" class="form-control" id="quantity" [(ngModel)]="product.quantity" name="quantity" required>
+  </div>
+
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" required>
+  </div>
+
+  <div class="form-group">
+    <label for="status">Status</label>
+    <select id="status" class="form-control" [(ngModel)]="product.status" name="status" required>
+      <option value="available">Available</option>
+      <option value="unavailable">Unavailable</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-success" (click)="editProduct()">Submit</button>
+  <button type="button" class="btn btn-danger" (click)="goToProductList()" style="margin-left: 10px">Cancel</button>
+</form>
+</div> 

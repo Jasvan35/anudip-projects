@@ -1,0 +1,56 @@
+<div class="col-md-6 offset-md-3">
+ <h3> Add Product </h3>
+ <form (ngSubmit) = "onSubmit()">
+  
+<div class="form-group">
+  <label>Product Code:</label>
+  <input type="text" class ="form-control" id = "id" [(ngModel)] = "productadd.id" name = "id">
+  <div *ngIf="!productadd.id">
+   <div class="alert alert-primary" role="alert"> Please enter a product code! </div>
+     </div>
+</div>
+    
+<div class="form-group">
+   <label> Product Name:</label>
+    <input type="text" class ="form-control" id = "name" [(ngModel)] = "productadd.name" name = "name">
+    <div *ngIf="!productadd.name">
+    <div class="alert alert-primary" role="alert"> Please enter a product name!
+    </div>
+     </div>
+</div>
+
+<div class="form-group">
+     <label for="quantity"> Quantity</label>
+     <input type="number" class ="form-control" id = "quantity" [(ngModel)] = "productadd.quantity" name = "quantity" required>
+       <div *ngIf="!productadd.quantity">
+         <div class="alert alert-primary" role="alert"> Please enter a quantity of product!
+           </div>
+       </div>
+</div>
+
+<div class="form-group">
+   <label for="price"> Price</label>
+    <input type="number" class ="form-control" id = "price" [(ngModel)] = "productadd.price" name = "price" required>
+   <div *ngIf="!productadd.price">
+   <div class="alert alert-primary" role="alert"> Please enter a product price!
+      </div>
+   </div>
+</div>
+    
+<div class="form-group">
+ <label> Status </label>
+ <select id="status" class="form-control" [(ngModel)]="productadd.status" name="status" required>
+  <option value="available">Available</option>
+  <option value="unavailable">Unavailable</option>
+  </select>
+  <div *ngIf="!productadd.status">
+  <div class="alert alert-primary" role="alert"> Please enter a product status!
+  </div>
+  </div>
+</div>
+    
+        <button class = "btn btn-success" type ="submit" (click)="saveProduct()">Add Product</button>
+        <button type="button" class="btn btn-danger" (click)="goToProductList()" style="margin-left: 10px">Cancel</button>
+    </form>
+    </div> 
+    

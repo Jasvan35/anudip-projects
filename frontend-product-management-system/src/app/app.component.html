@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-info bg-gradient text-dark navbar-dark">
+    <a href="#" class="navbar-brand">Home</a>
+    <div class="navbar-nav mr-auto">
+     <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="Products" routerLinkActive="active" class="nav-link" >Products List</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="AddProducts" routerLinkActive="active" class="nav-link" >Add Products</a>
+      </li>
+     </ul>
+    
+    </div>
+</nav>
+
+  <nav class="navbar navbar-light bg-light">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2 " type="button" routerLink="Products" routerLinkActive="active">Products</button>
+    <button class="btn btn-outline-success me-2" type="button" routerLink="AddProducts" routerLinkActive="active">Create Products</button>
+   </form>
+</nav>
+
+<h1 class="text-center rounded-pill border-5 border-primary"> {{title}} </h1>
+<div class ="container " >
+  <router-outlet></router-outlet>
+</div>
+
+
+<footer class = "footer">
+    <div class="container ">
+        <span>Project @AnudipFoundation</span>
+    </div>
+</footer>
